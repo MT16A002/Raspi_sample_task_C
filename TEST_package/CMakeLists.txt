@@ -10,7 +10,7 @@ find_package( Threads REQUIRED )
 include_directories(task_sub1.h)
 include_directories(task_sub2.h)
 include_directories(main.h)
-add_executable (TEST_package "task_sub1.c" "task_sub1.h" "task_sub2.c" "task_sub2.h" "main.c" "main.h")
+add_executable (TEST_package "task_sub1.c" "task_sub1.h" "task_sub2.c" "task_sub2.h" "main.c" "main.h" "task_sub.h")
 
 target_compile_options(TEST_package PUBLIC -O2 -Wall)
 target_link_libraries(TEST_package PUBLIC -pthread)
