@@ -6,7 +6,7 @@
 
 
 //タスク系初期化
-#define TASK_NUM 2
+#define TASK_NUM 3
 pthread_t task[TASK_NUM];
 int task_result[TASK_NUM];
 
@@ -33,6 +33,13 @@ int main() {
 		fprintf(stderr, "pthread_create(): ret = %d\n", task_result[1]);
 		exit(1);
 	}
+	//sub2
+	if ((task_result[2] = pthread_create(&task[1], NULL, &task_con, &global)) != 0)
+	{
+	  fprintf(stderr, "pthread_create(): ret = %d\n", task_result[1]);
+	  exit(1);
+	}
+
 
 	/////////////////////////////////////
 

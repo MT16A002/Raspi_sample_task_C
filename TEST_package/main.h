@@ -15,6 +15,9 @@
 #include <pthread.h>
 #include <stdbool.h>
 #include <sys/select.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <netdb.h>
 
 
 //タスク間で共通のグローバル
