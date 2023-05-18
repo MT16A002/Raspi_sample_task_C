@@ -15,17 +15,20 @@
 #include <pthread.h>
 #include <stdbool.h>
 #include <sys/select.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <netdb.h>
 
 
 //タスク間で共通のグローバル
-typedef struct{
-	pthread_mutex_t mutex;
-	int init;
-	int count;
-	int fin;
+typedef struct {
+  pthread_mutex_t mutex;
+  int init;
+  int count;
+  int fin;
 }Common;
 
-void init(Common *global);
+void init(Common* global);
 
 
 #endif //_H_MAIN
