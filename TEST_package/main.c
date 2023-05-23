@@ -6,14 +6,14 @@
 
 
 //タスク系初期化
-#define TASK_NUM 3
+#define TASK_NUM 2
 pthread_t task[TASK_NUM];
 int task_result[TASK_NUM];
 
 
 //メイン
-int main() {
-
+int main() 
+{
   Common global;
   pthread_mutex_init(&global.mutex, NULL);
   init(&global);

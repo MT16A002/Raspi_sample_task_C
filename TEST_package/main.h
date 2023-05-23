@@ -21,7 +21,8 @@
 
 
 //タスク間で共通のグローバル
-typedef struct {
+typedef struct 
+{
   pthread_mutex_t mutex;
   int init;
   int count;
